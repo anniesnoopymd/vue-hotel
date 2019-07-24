@@ -60,4 +60,47 @@ export default {
         bottom: 5px;
         font-size: 17px;
     }
+
+
+    .fa-times {
+        position: absolute;
+        color: #fff;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    .fa-times:hover {
+        color: #DB4343;
+    }
+
+    .red_text {
+        background-color: #DB4343;
+        color: #fff;
+        width: 120px;
+        font-size: 16px;
+        padding: 2px 10px;
+    }
+
+    .show_dis {
+        font-size: 14px;
+        padding: 0px 0px 10px 10px;
+    }
+
+    .info {
+        padding-top: 10px;
+    }
+    .info .room_eng {
+        font-size: 14px;
+        margin-left: 10px;
+        font-weight: 700;
+    }
+    .info .icon {
+        padding-left: 10px;
+    }
+    .info i {
+        color: #BDBDBC;
+        font-size: 14px;
+        padding: 2px;
+    }
 </style>

@@ -47,19 +47,16 @@
       </div>
     </div>
   </div>
-  <RoomList></RoomList>
 </template>
 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import RoomList from './components/RoomList.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    RoomList
+    'room-list': RoomList
   },
   data(){
     return{
@@ -256,50 +253,6 @@ html, body {
   color: #7189bf;
 }
 
-/*.room_container {*/
-  /*margin: 10px 0px;*/
-  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
-  /*transition-duration: 0.5s;*/
-/*}*/
-/*.room_container:hover {*/
-  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);*/
-/*}*/
-/*.room_container .cover {*/
-  /*height: 170px;*/
-  /*background-color: #eee;*/
-  /*position: relative;*/
-  /*background-size: cover;*/
-  /*background-position: center center;*/
-/*}*/
-/*.room_container .cover h6 {*/
-  /*background-color: #000;*/
-  /*color: #fff;*/
-  /*opacity: 0.7;*/
-  /*padding: 5px 15px;*/
-  /*position: absolute;*/
-  /*bottom: 5px;*/
-  /*font-size: 17px;*/
-/*}*/
-
-.block {
-  width: 70px;
-  height: 5px;
-  background-color: #614ad3;
-  margin-top: -10px;
-}
-
-.fa-times {
-  position: absolute;
-  color: #fff;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  transition-duration: 0.3s;
-}
-.fa-times:hover {
-  color: #DB4343;
-}
-
 .form-control {
   height: 35px;
   font-size: 14px;
@@ -312,35 +265,6 @@ s {
   padding: 10px;
 }
 
-.red_text {
-  background-color: #DB4343;
-  color: #fff;
-  width: 120px;
-  font-size: 16px;
-  padding: 2px 10px;
-}
-
-.show_dis {
-  font-size: 14px;
-  padding: 0px 0px 10px 10px;
-}
-
-.info {
-  padding-top: 10px;
-}
-.info .room_eng {
-  font-size: 14px;
-  margin-left: 10px;
-  font-weight: 700;
-}
-.info .icon {
-  padding-left: 10px;
-}
-.info i {
-  color: #BDBDBC;
-  font-size: 14px;
-  padding: 2px;
-}
 
 .edit_room {
   margin-top: 10px;
