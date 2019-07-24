@@ -36,5 +36,28 @@ export default {
 </script>
 
 <style scoped>
-
+    .room_container {
+        margin: 10px 0px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition-duration: 0.5s;
+    }
+    .room_container:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    }
+    .room_container .cover {
+        height: 170px;
+        background-color: #eee;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+    }
+    .room_container .cover h6 {
+        background-color: #000;
+        color: #fff;
+        opacity: 0.7;
+        padding: 5px 15px;
+        position: absolute;
+        bottom: 5px;
+        font-size: 17px;
+    }
 </style>
