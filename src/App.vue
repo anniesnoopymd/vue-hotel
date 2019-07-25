@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div class="container-fluid">
+  <div id="app" class="container-fluid">
+    <!--<div class="container-fluid">-->
       <div class="row">
         <div class="col-sm-3 left_block">
           <h4>Room Detail</h4>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!--</div>-->
 </template>
 
 
