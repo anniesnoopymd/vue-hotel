@@ -45,13 +45,15 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
   <!--</div>-->
 </template>
 
 
 <script>
 import RoomList from './components/RoomList.vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'app',

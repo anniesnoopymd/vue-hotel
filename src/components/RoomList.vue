@@ -1,5 +1,5 @@
 <template>
-    <div class="room_container">
+    <div class="room_container" data-toggle="modal" data-target="#detailModal" @click="sendData()">
         <div class="cover" :style="bg_css">
             <h6>{{room_data.name}}</h6><i class="i fa fa-times" @click="del_room(id)"></i>
         </div>
@@ -9,10 +9,42 @@
             <s>TWD ${{room_data.price}}</s>
             <div class="red_text">TWD ${{price_final_show}}</div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detailModal">Room details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cover" :style="bg_css">
+                            <h6>{{room_data.name}}</h6><i class="i fa fa-times" @click="del_room(id)"></i>
+                        </div>
+                        <div>
+                            <div class="room_eng">{{room_data.eng}}</div><span class="icon"><span v-if="room_data.equipment.breakfast"><i class="i fa fa-coffee"></i></span><span v-if="room_data.equipment.bathtub"><i class="i fa fa-bath"></i></span><span v-if="room_data.equipment.wifi"><i class="i fa fa-wifi"></i></span></span>
+                            <div class="show_dis">{{room_data.discount}} * {{hotel_discount}} = {{discount_show}} discount</div>
+                            <s>TWD ${{room_data.price}}</s>
+                            <div class="red_text">TWD ${{price_final_show}}</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
     name: 'RoomList',
     props:["room_data","hotel_discount","id","del_room","service_fee"],
@@ -30,6 +62,12 @@ export default {
             return {
                 "background-image":"url('"+this.room_data.cover+"')"
             }
+        }
+    },
+    methods:{
+        sendData(item){
+            console.log(item)
+
         }
     }
 }
